@@ -17,11 +17,15 @@ class Circle(Base):
         ,,' '-,___, '
         """
 
+class Square(Base):
+    def shape(self):
+        return "This is a square"
+
 
 def main():
-    c = Circle(2, 2, 1)
-    print("This is a circle")
-    print(c.draw())
+    s = Square(1, 2, 3)
+    print(s.shape())
+    print(s.draw())
 
 
 if __name__ == "__main__":
