@@ -1,6 +1,6 @@
 def my_steps(n):
     if n < 1 or n > 25:
-        raise ValueError(" number needs to be no less than one and no more than 25.")
+        raise ValueError("Input n should be between 1 and 25.")
 
     ways = [0] * (n + 1)
     
