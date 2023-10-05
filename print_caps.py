@@ -1,13 +1,6 @@
 def allcaps(func):
-
-    def wrapper(*args, **kwargs):
-
-        
-        result = func(*args, **kwargs)
-        
-        
-        return result.upper()
-    
-    return wrapper
-
+	def wrapper():
+		result = func()
+		return result.upper()
+	return wrapper
 
