@@ -1,7 +1,12 @@
-def sort_dictionary(d):
+def sort dictionary (d): 
 
-    sorted_d = sorted(d.items(), key=lambda x: x[1])
+	if not isinstance (d, dict):
 
-    result = [(name, phone) for name, (phone, age) in sorted_by_name]
+		raise ValueError ("Input must be a valid dictionary.")
 
-    return result
+	sorted_d = sorted(d. items, key-lambda x: x[0],reverse=True)
+
+		result_list = [(name, data[0]) for name, data in sorted _d]
+
+	return result list
+
