@@ -1,0 +1,5 @@
+Two Uses for why we use inheritance in a program is one is for the allowance of 
+resuing a code by referencing the behaviors and data of an object. so when a class 
+inherits from another class shares all the attributes and methods of the referenced 
+class. Another use for inheritance is overriding which allows you to provide their own 
+implementation and overrides the other method.
