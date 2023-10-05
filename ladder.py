@@ -1,25 +1,15 @@
-def ladder(steps):
+def my_steps(n):
+    if n < 1 or n > 25:
+        raise ValueError(" number needs to be no less than one and no more than 25.")
 
-	a = 1
+    ways = [0] * (n + 1)
+    
+    ways[0] = 1
 
-	b = 2
+    ways[1] = 1
 
-	if steps==1:
+    for i in range(2, n + 1):
+        ways[i] = ways[i - 1] + ways[i - 2]
 
-		return 1
+    return ways[n]
 
-	else if steps==2:
-
-		return 2
-
-	else:
-
-		for i in range(steps-2):
-
-			c = a+b;
-
-			a = b
-
-			b = c
-
-		return c
