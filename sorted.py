@@ -2,7 +2,7 @@ def sort dictionary (d):
 
 	if not isinstance (d, dict):
 
-		raise ValueError ("Input must be a valid dictionary.")
+		raise ValueError ("not valid dictionary.")
 
 	sorted_d = sorted(d. items, key-lambda x: x[0],reverse=True)
 
