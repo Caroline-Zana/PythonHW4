@@ -1,8 +1,7 @@
-def reverse_sort_dictionary(d):
+def sort_dictionary(d):
 
-    sorted_items = sorted(d.items(), key=lambda x: x[0], reverse=True)
-    
-    result = [(name, phone_age[0]) for name, phone_age in sorted_items]
-    
+    sorted_by_name = sorted(d.items(), key=lambda x: x[1])
+
+    result = [(name, phone) for name, (phone, age) in sorted_by_name]
+
     return result
-
