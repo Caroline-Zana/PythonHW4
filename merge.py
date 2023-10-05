@@ -1,38 +1,21 @@
 def merge_list(list1, list2):
+    if not all(isinstance(x, int) for x in list1) or not all(isinstance(x, int) for x in list2):
+        raise TypeError("Input lists should contain only integers.")
     
-    merged_list = list1 + list2
+    merged = []
+    i, j = 0, 0
 
-    
-    sorted_list = merge_sort(merged_list)
-
-    return sorted_list
-
-def merge_sort(arr):
-    if len(arr) <= 1:
-        return arr
-
-    mid = len(arr) // 2
-    left_half = arr[:mid]
-    right_half = arr[mid:]
-
-    left_half = merge_sort(left_half)
-    right_half = merge_sort(right_half)
-
-    return merge(left_half, right_half)
-
-def merge(left, right):
-    result = []
-    left_idx, right_idx = 0, 0
-
-    while left_idx < len(left) and right_idx < len(right):
-        if left[left_idx] < right[right_idx]:
-            result.append(left[left_idx])
-            left_idx += 1
+    while i < len(list1) and j < len(list2):
+        if list1[i] < list2[j]:
+            merged.append(list1[i])
+            i += 1
         else:
-            result.append(right[right_idx])
-            right_idx += 1
+            merged.append(list2[j])
+            j += 1
 
-    result.extend(left[left_idx:])
-    result.extend(right[right_idx:])
     
-    return result
+    merged.extend(list1[i:])
+    merged.extend(list2[j:])
+
+    return merged
+
