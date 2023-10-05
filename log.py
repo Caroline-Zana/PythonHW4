@@ -1,12 +1,16 @@
-def allcaps(func):
+import time
 
-    def wrapper(*args, **kwargs):
+def timestamp(func):
 
-        
-        result = func(*args, **kwargs)
-        
-        
-        return result.upper()
-    
-    return wrapper
+	def wrapper(*args, **kwargs):
+	
+	 current_time = time.ctime
+	
+	print(current_time)
+	
+	result = func(*args, **kwargs)
+	
+	return result 
+
+return wrapper
 
