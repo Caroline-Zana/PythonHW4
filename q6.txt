@@ -1,0 +1,7 @@
+1. No it does not change. The reason for this is because the a is an integer. 
+
+2. Yes it does change. The reason for this is because b is a dictionary and it passing 
+a reference. 
+
+3. Yes they differ, since integers are immuatble objects and variables are 
+dictionaries which a mutable objects
