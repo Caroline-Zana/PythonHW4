@@ -4,3 +4,5 @@ def allcaps(func):
         print(result.upper())
 
     return wrapper
+def my_test_function():
+    return "hello, world!"
