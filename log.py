@@ -2,11 +2,11 @@ import time
 
 def timestamp(func):
 
-	def wrapper(*args, **kwargs):
+	def wrapper(*args,**kwargs):
 	
 	print(time.ctime())
 	
-	result func(*args, **kwargs) 
+	result func(*args,**kwargs) 
 
 return wrapper
 
