@@ -1,19 +1,11 @@
-class Base:
+class Shape:
     def __init__(self, x, y):
         self.x = x
         self.y = y
 
-class Shape(Base):
     def shape(self):
-        return f"This is a {self.__class__.__name__.lower()} ({self.x}, {self.y})"
+        return "This a shape"
 
-class Square(Shape):
-    def __init__(self, x, y, size):
-        super().__init__(x, y)
-        self.size = size
-
-    def draw(self):
-        return f"{super().shape()}\n{'#' * self.size}"
 
 class Circle(Shape):
     def __init__(self, x, y, size):
@@ -21,14 +13,28 @@ class Circle(Shape):
         self.size = size
 
     def draw(self):
-        return f"{super().shape()}\n,-~~~-,\n,' ', ,, ,, ,, ,, ,, ,, ,,\n,,' '-,___, 
-'"
+        return f"""
+        ({self.x}, {self.y})
+        {self.size}
+        , - ~ ~ ~ - ,
+        , ' ' ,
+        , ,
+        , ,
+        , ,
+        , ,
+        , ,
+        , ,
+        , ,
+        , , '
+        ' - , _ _ _ , '
+        """
+
 
 def main():
-    s = Square(1, 2, 3)
-    print(s.shape())
-    print(s.draw())
+    c = Circle(1, 2, 3)
+    print(c.shape())
+    print(c.draw())
+
 
 if __name__ == "__main__":
     main()
-
