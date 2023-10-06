@@ -1,8 +1,8 @@
 def sort_dictionary(d):
 
-    sorted_by_name = sorted(d.items(), key=lambda x: x[1])
+    sorted_by_name = sorted(d.items(), key=lambda x: x[0],reverse=True)
 
-    result = [(name, phone) for name, (phone, age) in sorted_by_name]
+    result = [(name, info[0]) for name, info in sorted_by_name]
 
     return result
 
