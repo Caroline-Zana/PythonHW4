@@ -1,6 +1,6 @@
 def my_steps(n):
     if not 1 <= n <= 25:
-        raise ValueError("Input is out of bounds")
+        raise ValueError("out of bounds")
 
     if n <= 2:
         return n
