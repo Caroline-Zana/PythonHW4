@@ -1,15 +1,14 @@
 def my_steps(n):
-    if n < = 1
-       return 1
-else
-    ways = [0] * (n + 1)
-    
-    ways[0] = 1
+    if not 1 <= n <= 25:
+        raise ValueError("Input is out of bounds")
 
-    ways[1] = 1
+    if n <= 2:
+        return n
 
-    for i in range(2, n + 1):
-        ways[i] = ways[i - 1] + ways[i - 2]
+    prev_1, prev_2 = 1, 2
+    for i in range(3, n + 1):
+        current = prev_1 + prev_2
+        prev_1, prev_2 = prev_2, current
 
-    return ways[n]
+    return prev_2
 
