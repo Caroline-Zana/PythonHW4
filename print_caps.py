@@ -1,4 +1,3 @@
-def my_test_function ()
 def allcaps(func):
     def wrapper():
         result = func()
