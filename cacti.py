@@ -1,4 +1,4 @@
-def cacti_number(grid):
+def cacti_num(grid):
     rows, cols = len(grid), len(grid[0])
     count = 0
 
